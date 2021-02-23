@@ -92,6 +92,10 @@ The computational graph of the system _rosgraph_final_assignment.png_ can be fou
 
 ![alt text](https://github.com/alihaidersays/ResearchTrack_FinalAssignment/blob/main/rosgraph_final_assignment.png)
 
+## Limitations and Possible Improvements
+
+A limitation is the lag in publishing the position when the robot reaches the target position, maybe due to the sampling rate in terms of the precision in determining robot's position in the environment. This may be corrected using a slightly lower sampling rate which may, in turn, also increase the robot's speed and enable it to reach the target more quickly.
+
 ## Documentation
 
 The documentation for the project can be found in HTML format inside _docs_ folder. Doxygen tool was used for the documentation of C++ files.
