@@ -73,7 +73,9 @@ rostopic echo /move_base/status
 ```
 rosrun rqt_graph rqt_graph
 ```
-The computational graph of the system _rosgraph_final_assignment.png_ can be found in the main repository.
+The computational graph of the system _rosgraph_final_assignment.png_ can be found below:
+
+![alt text](https://github.com/alihaidersays/ResearchTrack_FinalAssignment/blob/main/rosgraph_final_assignment.png)
 
 ## Documentation
 
