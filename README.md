@@ -98,5 +98,5 @@ A limitation is the lag in publishing the position when the robot reaches the ta
 
 ## Documentation
 
-The documentation for the project can be found in HTML format inside _docs_ folder. Doxygen tool was used for the documentation of C++ files.
+The documentation for the project can be found in HTML format inside _docs_final_ folder. Doxygen tool was used for the documentation of Python and C++ files.
 
