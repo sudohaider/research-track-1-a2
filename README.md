@@ -9,7 +9,7 @@ The program requests user input on the following states or choices:
 3. Robot starts following the external walls.
 4. Robot stops in the last position.
 
-If the robot is in state 1, or 2, the system waits until the robot reaches the position in order to switch to the state 3 and 4.
+If the robot is in state 1 or 2, the system waits until the robot reaches the position in order to switch to state 3 or 4.
 
 ## Description of Files
 
