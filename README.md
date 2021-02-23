@@ -9,6 +9,8 @@ The program requests user input on the following given choices:
 3. Robot starts following the external walls.
 4. Robot stops in the last position.
 
+If the robot is in state 1, or 2, the system waits until the robot reaches the position in order to switch to the state 3 and 4.
+
 ## Description of Files
 
 ### Simulator: _Gazebo_
@@ -24,6 +26,13 @@ _rviz_ is a 3D tool for ROS Visualization. It allows the user to view the simula
 The controller package _assignment1_pkg_ contains the C++ file **controller.cpp** which contains the source code for controlling the robot. The functionality is called through the node _assignment1_node_.
 
 Position callback function is implemented for subscribing to the topic `/odom` from nav_msgs/Odometry. The function initializes and calls service to acquire values of new position of robot. The destination is reached when the distance between the current position and destination is less than 0.1, and the function requests for new positions. The linear velocities are published on topic _cmd_vel_ according to the formula **vel_x = k (new_x - current_x)**, where k = 1 in this case. A message is published on topic _assignment1/position_ containing the name of message, _x_, _y_, _new_x_ and _new_y_ coordinates.
+
+-------
+
+In the first choice, the main node sends a service request to the tiserver and gets a random target position. Then, it publishes this position to the /move_base/goal and then continuously checks the status of the goal by subscribing to /move_base/status topic. Once, the status indicates reaching the target. The interface asks the user to enter another request.
+In the second choice, the main node asks the user to choose one out of 6 possible target positions, and publishes it to /move_base/goal as in the previous choice.
+In the third choice, the main node sends a request to the wall_follower service in order for the robot to start following the walls. The user can enter another request anytime during following the walls.
+In the fourth choice, the main node stops wall following and publishes zero velocity command to /cmd_vel, and the robot stops moving.
 
 ### Server: _my_srv_
 
