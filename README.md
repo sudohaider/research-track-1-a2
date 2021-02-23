@@ -54,7 +54,7 @@ git clone https://github.com/alihaidersays/ResearchTrack_FinalAssignment.git
 
 The following steps will run the simulator along with the controller nodes.
 
-1. **Gazebo** is the 3D simulator while **RViz** is the 3D visualization tool for ROS. In the command line, launch Gazebo and RViz by executing the following command:
+1. **Gazebo** is the 3D simulator while **rviz** is the 3D visualization tool for ROS. In the command line, launch Gazebo and rviz by executing the following command:
 ```
 roslaunch final_assignment simulation_gmapping.launch
 ```
