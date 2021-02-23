@@ -1,6 +1,13 @@
 # Research Track - Final Assignment
 ##### Submitted by Muhammad Ali Haider Dar (S5046263)
-A ROS architecture for the control of the robot in the environment. The software relies on the move_base and gmapping packages for localizing the robot and plan the motion. The architecture gets the user request, and lets the robot execute one of the pre-defined behaviors accordingly, along with Simulataneous Localization and Mapping (SLAM), path planning, and collision avoidance.
+This is a ROS architecture for the control of a mobile robot in the Gazebo environment. The software relies on the move_base and gmapping packages for localizing the robot and plan the motion. The architecture gets the user request, and lets the robot execute one of the pre-defined behaviors accordingly, along with Simulataneous Localization and Mapping (SLAM), path planning, and collision avoidance.
+
+The program requests user input on the following given choices:
+1. Robot moves randomly in the environment, by choosing 1 out of 6 possible target positions:
+[(-4,-3);(-4,2);(-4,7);(5,-7);(5,-3);(5,1)].
+2. Program asks the user for the next target position, checking that the position is one of the possible six target positions, and the robot reaches it.
+3. Robot starts following the external walls.
+4. Robot stops in the last position.
 
 ## Description of Files
 
@@ -10,7 +17,7 @@ Gazebo is the 3D simulator for ROS. Further documentation about Gazebo can be re
 
 ### Visualizer: _rviz_
 
-_rviz_ is a 3D tool for ROS Visualization. It allows the user to view the simulated robot model, log sensor information from the robot's sensors, and replay the logged sensor information. By visualizing what the robot is seeing, thinking, and doing, the user can debug a robot application from sensor inputs to planned (or unplanned) actions. Further documentation about _rviz_ the package can be read [_here_](http://wiki.ros.org/rviz).
+_rviz_ is a 3D tool for ROS Visualization. It allows the user to view the simulated robot model, log sensor information from the robot's sensors, and replay the logged sensor information. By visualizing what the robot is seeing, thinking, and doing, the user can debug a robot application from sensor inputs to planned (or unplanned) actions. Further documentation about _rviz_ can be read [_here_](http://wiki.ros.org/rviz).
 
 ### Controller: _final_assignment_
 
