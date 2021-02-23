@@ -39,36 +39,41 @@ git clone https://github.com/alihaidersays/ResearchTrack_FinalAssignment.git
 
 The following steps will run the simulator along with the controller nodes.
 
-1. In the command line, run the 2D simulator, Stage, by executing the following command:
+1. **Gazebo** is the 3D simulator while **RViz** is the 3D visualization tool for ROS. In the command line, launch Gazebo and RViz by executing the following command:
 ```
-rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
+roslaunch final_assignment simulation_gmapping.launch
 ```
 
 2. In a new command line tab, run the following command:
 ```
-rosrun assignment1_pkg assignment1_node
+roslaunch final_assignment move_base.launch
 ```
 
 3. In a new command line tab, run the following command:
 ```
-rosrun assignment1_srv newpos_srv
+rosrun final_assignment wall_follow_service_m.py
 ```
 
-4. To display the list of running topics, run  the following command in a new command line tab:
+4. In a new command line tab, run the following command:
 ```
-rostopic list
-```
-
-5. The information getting published in the topics can be printed on the command line using the 'echo' command. Run the following command to see the coordinates of robot's current and new positions:
-```
-rostopic echo /assignment1/position
+rosrun my_srv final_server
 ```
 
-6. To display a graph of what's going on in the system, run the following command in a new command line tab: 
+5. In a new command line tab, run the following command:
+```
+rosrun final_assignment final_ui.py
+``` 
+
+6. The information getting published in the topics can be printed on the command line using the 'echo' command. Run the following command:
+```
+rostopic echo /move_base/status
+```
+
+7. To display a graph of what's going on in the system, run the following command in a new command line tab: 
 ```
 rosrun rqt_graph rqt_graph
 ```
-The computational graph of the system _rosgraph.png_ can be found in the main repository.
+The computational graph of the system _rosgraph_final_assignment.png_ can be found in the main repository.
 
 ## Documentation
 
