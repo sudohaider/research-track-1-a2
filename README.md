@@ -1,5 +1,5 @@
-# Research Track - Final Assignment
-##### Submitted by Muhammad Ali Haider Dar (S5046263)
+# Research Track 1 - Final Assignment
+
 This is a ROS architecture for the control of a mobile robot in the Gazebo environment. The software relies on the move_base and gmapping packages for localizing the robot and plan the motion. The architecture gets the user request, and lets the robot execute one of the pre-defined behaviors accordingly, along with Simulataneous Localization and Mapping (SLAM), path planning, and collision avoidance.
 
 The program requests user input on the following states or choices:
