@@ -43,7 +43,7 @@ The following steps will help prepare the necessary environment and dependencies
 
 3. Clone the remote repository of assignment in your local workspace using the command:
 ```
-git clone https://github.com/alihaidersays/ResearchTrack_FinalAssignment.git
+git clone https://github.com/sudohaider/research-track-1-a2.git
 ```
 
 3. Build the file using `catkin_make` in the root folder of your workspace.
@@ -90,7 +90,7 @@ rosrun rqt_graph rqt_graph
 ```
 The computational graph of the system _rosgraph_final_assignment.png_ can be found below:
 
-![alt text](https://github.com/alihaidersays/ResearchTrack_FinalAssignment/blob/main/rosgraph_final_assignment.png)
+![alt text](https://github.com/sudohaider/research-track-1-a2/blob/main/rosgraph_final_assignment.png)
 
 ## Limitations and Possible Improvements
 
